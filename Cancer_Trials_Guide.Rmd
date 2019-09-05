@@ -1,0 +1,25 @@
+Find Nearby Locations for Cancer Trials
+
+Cancer is a leading cause of death worldwide, accounting for an estimated 9.6 million deaths in 2018. The most common cancers are lung (2.09 million cases), Breast (2.09 million cases), Colorectal (1.80 million cases), Prostate (1.28 million cases), Prostate (1.28 million cases), Skin cancer (non-melanoma) (1.04 million cases), Stomach (1.03 million cases)    
+
+Although there is a variety of treatments such as chemotherapy, surgery, radiation, immunotherapy, etc. available to control tumor growth, relentless efforts to search for a higher quality of treament and care aim to help prevent metastasis more effectively and safely as well as to simplify treatment procedures (eg., using pills instead of IV infusion or chemotherapy).
+
+With these goals in mind, cancer trials become more important to identify if a new drug is effective from different aspects. Besides, due to the evolution nature of cancer genomic profile, once a treatment fails, patients tend to seek for new therapeutical approaches including new trials. 
+
+The final project is to write a program that helps patients to find trials available based on cancer type and zip code.
+
+API from National Cancer Institute  https://clinicaltrialsapi.cancer.gov
+
+Packages used in this program:
+- requests (download url)
+- googlemaps (obtain geolocation from a zip code or regular address)
+- geopy (calculate the distance between a pair of coordinates)
+- gmplot (plot pins of locations on google map)
+
+Steps going through Json data to obtain nearby locations:
+- Obtain studies that are specific to patient's cancer type
+- Find the geolocation of each site.
+- If no geolocation is available, location (address, city, state, zip code) is obtained and converted to geolocation.
+- Obtain distance between patient and site coordinates. Distance is within 10.0 miles
+- Return actual locations in form of readable addresses on google map.
+
